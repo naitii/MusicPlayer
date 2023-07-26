@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -112,16 +111,6 @@ namespace MusicPlayer
             axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * e.X / progressBar1.Width;
         }
         
-        
-        private void play_btn_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void play_btn_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
 
         private void open_btn_Click(object sender, EventArgs e)
         {
