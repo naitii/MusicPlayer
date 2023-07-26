@@ -53,11 +53,13 @@ namespace MusicPlayer
             if(c == 0)
             {
                 axWindowsMediaPlayer1.Ctlcontrols.pause();
+                play_btn.Text = "PLAY";
                 c = 1;
             }
             else
             {
                 axWindowsMediaPlayer1.Ctlcontrols.play();
+                play_btn.Text = "PAUSE";
                 c = 0;
             }
         }
