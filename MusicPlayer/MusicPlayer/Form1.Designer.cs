@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pr_btn = new System.Windows.Forms.Button();
             this.play_btn = new System.Windows.Forms.Button();
-            this.pause_btn = new System.Windows.Forms.Button();
             this.stop_btn = new System.Windows.Forms.Button();
             this.next_btn = new System.Windows.Forms.Button();
             this.open_btn = new System.Windows.Forms.Button();
@@ -62,7 +61,7 @@
             this.pr_btn.Name = "pr_btn";
             this.pr_btn.Size = new System.Drawing.Size(131, 46);
             this.pr_btn.TabIndex = 0;
-            this.pr_btn.Text = "PREVIEW";
+            this.pr_btn.Text = "PREVIOUS";
             this.pr_btn.UseVisualStyleBackColor = false;
             this.pr_btn.Click += new System.EventHandler(this.pr_btn_Click);
             // 
@@ -72,29 +71,14 @@
             this.play_btn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.play_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.play_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.play_btn.Location = new System.Drawing.Point(181, 526);
+            this.play_btn.Location = new System.Drawing.Point(207, 526);
             this.play_btn.Margin = new System.Windows.Forms.Padding(4);
             this.play_btn.Name = "play_btn";
-            this.play_btn.Size = new System.Drawing.Size(124, 46);
+            this.play_btn.Size = new System.Drawing.Size(171, 46);
             this.play_btn.TabIndex = 1;
-            this.play_btn.Text = "PLAY";
+            this.play_btn.Text = "PLAY / PAUSE";
             this.play_btn.UseVisualStyleBackColor = false;
             this.play_btn.Click += new System.EventHandler(this.play_btn_Click);
-            // 
-            // pause_btn
-            // 
-            this.pause_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pause_btn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pause_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pause_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pause_btn.Location = new System.Drawing.Point(322, 526);
-            this.pause_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.pause_btn.Name = "pause_btn";
-            this.pause_btn.Size = new System.Drawing.Size(124, 46);
-            this.pause_btn.TabIndex = 2;
-            this.pause_btn.Text = "PAUSE";
-            this.pause_btn.UseVisualStyleBackColor = false;
-            this.pause_btn.Click += new System.EventHandler(this.pause_btn_Click);
             // 
             // stop_btn
             // 
@@ -102,7 +86,7 @@
             this.stop_btn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.stop_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stop_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.stop_btn.Location = new System.Drawing.Point(460, 526);
+            this.stop_btn.Location = new System.Drawing.Point(386, 526);
             this.stop_btn.Margin = new System.Windows.Forms.Padding(4);
             this.stop_btn.Name = "stop_btn";
             this.stop_btn.Size = new System.Drawing.Size(124, 46);
@@ -117,7 +101,7 @@
             this.next_btn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.next_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.next_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.next_btn.Location = new System.Drawing.Point(589, 526);
+            this.next_btn.Location = new System.Drawing.Point(572, 526);
             this.next_btn.Margin = new System.Windows.Forms.Padding(4);
             this.next_btn.Name = "next_btn";
             this.next_btn.Size = new System.Drawing.Size(124, 46);
@@ -132,7 +116,7 @@
             this.open_btn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.open_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.open_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.open_btn.Location = new System.Drawing.Point(805, 526);
+            this.open_btn.Location = new System.Drawing.Point(745, 526);
             this.open_btn.Margin = new System.Windows.Forms.Padding(4);
             this.open_btn.Name = "open_btn";
             this.open_btn.Size = new System.Drawing.Size(124, 46);
@@ -207,10 +191,10 @@
             // 
             this.duration.Font = new System.Drawing.Font("Forte", 13.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.duration.ForeColor = System.Drawing.Color.SpringGreen;
-            this.duration.Location = new System.Drawing.Point(428, 80);
+            this.duration.Location = new System.Drawing.Point(858, 457);
             this.duration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.duration.Name = "duration";
-            this.duration.Size = new System.Drawing.Size(143, 64);
+            this.duration.Size = new System.Drawing.Size(109, 34);
             this.duration.TabIndex = 14;
             this.duration.Text = "00:00";
             this.duration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,7 +206,7 @@
             this.track_list.ForeColor = System.Drawing.Color.Lime;
             this.track_list.FormattingEnabled = true;
             this.track_list.ItemHeight = 29;
-            this.track_list.Location = new System.Drawing.Point(114, 148);
+            this.track_list.Location = new System.Drawing.Point(111, 130);
             this.track_list.Margin = new System.Windows.Forms.Padding(4);
             this.track_list.Name = "track_list";
             this.track_list.Size = new System.Drawing.Size(843, 323);
@@ -237,10 +221,10 @@
             this.show_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.show_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.show_btn.Image = ((System.Drawing.Image)(resources.GetObject("show_btn.Image")));
-            this.show_btn.Location = new System.Drawing.Point(932, 526);
+            this.show_btn.Location = new System.Drawing.Point(894, 526);
             this.show_btn.Margin = new System.Windows.Forms.Padding(4);
             this.show_btn.Name = "show_btn";
-            this.show_btn.Size = new System.Drawing.Size(34, 46);
+            this.show_btn.Size = new System.Drawing.Size(72, 46);
             this.show_btn.TabIndex = 16;
             this.show_btn.UseVisualStyleBackColor = false;
             this.show_btn.Click += new System.EventHandler(this.show_btn_Click);
@@ -277,7 +261,6 @@
             this.Controls.Add(this.open_btn);
             this.Controls.Add(this.next_btn);
             this.Controls.Add(this.stop_btn);
-            this.Controls.Add(this.pause_btn);
             this.Controls.Add(this.play_btn);
             this.Controls.Add(this.pr_btn);
             this.Controls.Add(this.pictureBox1);
@@ -298,7 +281,6 @@
 
         private System.Windows.Forms.Button pr_btn;
         private System.Windows.Forms.Button play_btn;
-        private System.Windows.Forms.Button pause_btn;
         private System.Windows.Forms.Button stop_btn;
         private System.Windows.Forms.Button next_btn;
         private System.Windows.Forms.Button open_btn;

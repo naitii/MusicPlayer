@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,16 +46,24 @@ namespace MusicPlayer
         {
            axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
-
+        int count = 0;
+        int c = 0;
         private void play_btn_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.play();
+            count++;
+            if(c == 0)
+            {
+                axWindowsMediaPlayer1.Ctlcontrols.pause();
+                c = 1;
+            }
+            else
+            {
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                c = 0;
+            }
         }
 
-        private void pause_btn_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.Ctlcontrols.pause();
-        }
+       
 
         private void next_btn_Click(object sender, EventArgs e)
         {
@@ -64,10 +73,6 @@ namespace MusicPlayer
             }
         }
 
-        private void vol_track_Scroll(object sender, EventArgs e)
-        {
-
-        }
 
         private void pr_btn_Click(object sender, EventArgs e)
         {
@@ -105,6 +110,17 @@ namespace MusicPlayer
         private void progressBar1_MouseDown(object sender, MouseEventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * e.X / progressBar1.Width;
+        }
+        
+        
+        private void play_btn_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void play_btn_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
 
         private void open_btn_Click(object sender, EventArgs e)
