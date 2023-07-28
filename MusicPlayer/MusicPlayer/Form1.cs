@@ -12,15 +12,16 @@ namespace MusicPlayer
     public partial class Form1 : Form
     {
         
+        string[] paths, files;
         public Form1()
         {
 
             MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             InitializeComponent();
+            
         }
 
-        string[] paths, files;
 
         private void show_btn_Click(object sender, EventArgs e)
         {
@@ -66,12 +67,13 @@ namespace MusicPlayer
 
        
 
-        private void next_btn_Click(object sender, EventArgs e)
+        public void next_btn_Click(object sender, EventArgs e)
         {
             if(track_list.SelectedIndex<track_list.Items.Count - 1)
             {
                 track_list.SelectedIndex = track_list.SelectedIndex + 1;
             }
+
         }
 
 
@@ -102,6 +104,9 @@ namespace MusicPlayer
             }
         }
 
+        
+
+
         private void vol_track_Scroll_1(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.settings.volume = vol_track.Value;
@@ -112,6 +117,12 @@ namespace MusicPlayer
         {
             axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * e.X / progressBar1.Width;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            track_list.Visible = false;
+        }
+
         
 
         private void open_btn_Click(object sender, EventArgs e)
