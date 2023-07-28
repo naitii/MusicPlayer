@@ -92,7 +92,15 @@ namespace MusicPlayer
             { 
                 progressBar1.Maximum = (int)axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration;
                 progressBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
+                if(progressBar1.Value == progressBar1.Maximum) 
+                {
+                    if (track_list.SelectedIndex < track_list.Items.Count - 1)
+                    {
+                        track_list.SelectedIndex = track_list.SelectedIndex + 1;
+                    }
+                }
             }
+            
             duration.Text =  "";
             try
             {
