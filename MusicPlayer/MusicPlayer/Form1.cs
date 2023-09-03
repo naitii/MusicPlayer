@@ -82,6 +82,7 @@ namespace MusicPlayer
             if (track_list.SelectedIndex > 0)
             {
                 track_list.SelectedIndex = track_list.SelectedIndex - 1;
+                //XYZ
             }
         }
 
