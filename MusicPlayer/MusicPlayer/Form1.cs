@@ -137,6 +137,12 @@ namespace MusicPlayer
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
+            string path;
+            path = Path.GetDirectoryName(Environment.GetFolderPath(Environment.SpecialFolder.Personal));
+            path = Path.Combine(path, "Music");
+            openFileDialog.InitialDirectory = path;
+            openFileDialog.Title = "Please select one or more files";
+            openFileDialog.Filter = "Music Files|*.mp3;*.wav;*.aac";
             if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 files = openFileDialog.FileNames;
